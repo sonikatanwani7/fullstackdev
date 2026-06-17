@@ -19,3 +19,11 @@ fruit[2].style.backgroundColor = "yellow";
 for (let i = 0; i < fruit.length; i++){
     fruit[i].style.fontWeight = "bold"
 }
+
+const fruitList = document.getElementsByTagName('li');
+
+fruitList[4].style.color = "red";
+
+for (let i = 0; i < fruitList.length; i++){
+    fruitList[i].style.fontStyle="italic"
+}
