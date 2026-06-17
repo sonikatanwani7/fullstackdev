@@ -85,3 +85,17 @@ const secondDiv = divs[1]
 secondDiv.insertBefore(paragraph, fruits)
 
 paragraph.id="fruits-total"
+// we can also set attributes by setAttribute eg -("title", "This is total fruit count")
+//both below are valid
+//paragraph.title = "This is total fruit count";
+paragraph.setAttribute("title", "This is total fruit count");
+
+
+// DOM relations:
+// parent, children, sibling 
+
+// ul.parentElement - will give div 
+// ul.children - will give li items - htmlcollection 
+//ul.lastElementChild, ul.firstElementChild 
+// nextElementSibling , previousElementSibling
+
