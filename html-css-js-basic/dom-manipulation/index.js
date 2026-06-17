@@ -27,3 +27,61 @@ fruitList[4].style.color = "red";
 for (let i = 0; i < fruitList.length; i++){
     fruitList[i].style.fontStyle="italic"
 }
+
+// htmlcollections are returned by document.getElementsBy... 
+// querySelectorAll returns a NodeList
+// NodeList supports forEach()
+// but it is NOT a real Array
+// map(), filter(), reduce(), push(), pop() are not available
+// we need Array.from(...)still
+
+// main difference - HTMLcollections - are live, reflect document chages that are dynamic
+// nodelist - does not update when adding nodes dynamically... check lengths of collections later - querySelector will always stay the same
+
+
+
+const mainHeadingQuery = document.querySelector('#main-heading')
+mainHeadingQuery.style.textAlign ="right"
+
+const basketHeadingQuery = document.querySelector('#basket-heading');
+basketHeadingQuery.style.color = "brown";
+
+const evenFruitItems = document.querySelectorAll('.fruit:nth-child(even)');
+
+evenFruitItems.forEach((item) => {
+    item.style.backgroundColor = "brown";
+    item.style.color = "white";
+})
+
+const fruits = document.querySelector('.fruits');
+fruits.style.listStyle="none"
+
+
+
+// Create DOM elements:
+
+const subHeading = document.createElement('h3');
+
+const textNode = document.createTextNode('Buy high quality organic fruits online');
+subHeading.appendChild(textNode)
+
+header.appendChild(subHeading)
+
+
+//subHeading.style = "font-weight:bold;font-style:italic"
+// above throws error - dom styles should be updated dynamically  and it will overwrite any existing styles too... so not at all recommended
+subHeading.style.fontWeight = "bold";
+subHeading.style.fontStyle ="italic"
+
+const paragraph = document.createElement('p');
+paragraph.textContent = "Total fruits: 4"
+
+
+const divs = document.querySelectorAll('div');
+
+
+const secondDiv = divs[1]
+
+secondDiv.insertBefore(paragraph, fruits)
+
+paragraph.id="fruits-total"
