@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <form id="expenseTracker" onsubmit="handleExpenseFormSubmit(event)">
+        <label for="amount">Expense Amount</label>
+        <input id="amount" name="amount" val=""/>
+        <label for="descriptiom">Expense Description</label>
+        <input id="description" name="description" val=""/>
+        <label for="categpry">Expense category</label>
+        <select id="category" name="category">
+            <option value="movie">movie</option>
+            <option value="fuel">fuel</option>
+            <option value="dining">dining</option>
+            <option value="travel">travel</option>
+            <option value="education">Education</option>
+        </select>
+        
+        <button type="submit">Add expense</button>
+
+    </form>
+
+    <ul id="expenseList">
+
+
+
+
+    </ul>
+    <script src="./index.js"></script>
+</body>
+</html>
